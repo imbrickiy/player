@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,500&display=swap" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Player</title>
+</head>
+
+<body>
+    <main id="app">
+        <!-- Список радиостанций -->
+        <div class="flex-container">
+            <div class="m-2 flex-item" v-for="(station, index) in list" :key="index">
+                <div class="card">
+                    <img :src="station.icon_png" alt="">
+                    <div class="overlay">
+                        <div class="links">
+                            <span @click="play(index)" v-show="visible">
+                                <i class="fa fa-play"></i>
+                            </span>
+                            <span @click="stop()" v-show="!visible">
+                                <i class="fa fa-stop"></i>
+                            </span>
+                        </div>
+                        <span style="background: none; color: #ffffff;">{{station.title}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-item-player">
+                <div class="card-player">
+                    <img :src="icon_png">
+                    <span style="color: #ffffff;">{{title}}</span>
+                </div>
+            </div>
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.js"></script>
+<script src=" https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./assets/js/script.js"></script>
+
+</html>
