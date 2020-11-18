@@ -91,7 +91,7 @@ var app = new Vue({
 					new: false,
 					has_feedback: false,
 					stream: 'http://hls.radiorecord.ru:8081/rr/deti/playlist.m3u8',
-					stream_32: 'http://air2.radiorecord.ru:9001/deti_aac',
+					stream_32: 'http://air2.radiorecord.ru:9001/deti_aac_64',
 					stream_64: 'http://air2.radiorecord.ru:9001/deti_aac_64',
 					stream_128: 'http://air2.radiorecord.ru:9002/deti_128',
 					stream_320: 'http://air2.radiorecord.ru:9003/deti_320',
